@@ -25,9 +25,9 @@ const Spotlight = () => {
             <ArrowLeft height={50} width={50} color="blue"/>
           </div>
           {data.map((card) => (
-            <div key={card.id}>
-              <div key={card.id} className={` p-2 text-center shadow-2xl ${isDarkTheme ? "bg-[#3b3e47]" : "bg-white"}`}>
-                <div className="h-3/4 ">
+            <div key={card.id} className="">
+              <div key={card.id} className={`h-[45rem] p-2 text-center shadow-2xl ${isDarkTheme ? "bg-[#3b3e47]" : "bg-white"}`}>
+                <div className="h-[28rem] ">
                   <Image
                     src={card.img}
                     width={600}
