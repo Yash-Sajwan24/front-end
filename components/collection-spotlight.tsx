@@ -37,7 +37,7 @@ const Spotlight = () => {
                   />
                 </div>
                 - - - - - - - - - - - - - - - - 
-                <h1 className="my-5 text-xl">{card.title}</h1>
+                <h1 className="my-5 text-lg">{card.title}</h1>
                 <p className={` mt-2 ${isDarkTheme ? "text-gray-300": "text-gray-600" }`}>{card.date}</p>
                 <p className={` my-2 ${isDarkTheme ? "text-gray-300": "text-gray-600" }`}>{card.location}</p>
                 <div className="bg-black mx-2">
