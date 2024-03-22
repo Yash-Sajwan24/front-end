@@ -1,7 +1,9 @@
-import { useTheme } from "@/app/page";
+'use client'
+import { useContext } from "react";
+import { useGlobalContext } from "@/app/Context/store";
 
 const Navbar = () => {
-  const { isDarkTheme, toggleTheme } = useTheme();
+  const { isDarkTheme, toggleTheme } = useGlobalContext();
   return (
     <>
       <div className="flex justify-between">

@@ -1,10 +1,11 @@
+'use client'
 import Image from "next/image";
-import { useTheme } from "@/app/page";
+import { useGlobalContext } from "@/app/Context/store";
 
 
 
 const Card = ({ data }: any) => {
-  const { isDarkTheme, toggleTheme } = useTheme();
+  const { isDarkTheme, toggleTheme } = useGlobalContext();
   return (
     <>
       <div className="grid grid-cols-5 gap-2">
@@ -38,7 +39,7 @@ const Card = ({ data }: any) => {
             
           </div>
         ))}
-         <div className={`p-2 relative ${isDarkTheme ? "bg-[#3b3e47]": " border-2 border-black bg-white text-black"}`} >
+         <div className={`p-2 relative ${isDarkTheme ? "bg-[#3b3e47]": " bg-white text-black"}`} >
           <div className="absolute bg-black py-1 px-4 right-2 text-white">Ad</div>
           <Image
             src="/assets/images/add.jpeg"

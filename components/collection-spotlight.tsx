@@ -1,11 +1,13 @@
+'use client'
 import Image from "next/image";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { data } from "./content/spotlight-data";
-import { useTheme } from "@/app/page";
+import { useContext } from "react";
+import { useGlobalContext } from "@/app/Context/store";
 
 
 const Spotlight = () => {
-  const { isDarkTheme, toggleTheme } = useTheme();
+  const { isDarkTheme, toggleTheme } = useGlobalContext();
   return (
     <>
       <div className={`mt-8 py-10 mb-20 ${isDarkTheme ? "bg-gradient-to-b from-[#19282a] to-[#211b2b]" : "bg-white text-black" }`}>
